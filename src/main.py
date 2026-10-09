@@ -52,6 +52,35 @@ def main():
 
     print(f"\nTotal: {len(students)} students")
 
+ # Tìm kiếm sinh viên
+    print("\n--- Tìm kiếm ---")
+    search_student(students, "Van")
+
 
 if __name__ == "__main__":
     main()
+def search_student(students: list, keyword: str) -> list:
+    """Tìm kiếm sinh viên theo tên hoặc mã.
+
+    Args:
+        students: Danh sách sinh viên
+        keyword: Từ khóa tìm kiếm
+
+    Returns:
+        Danh sách sinh viên khớp với từ khóa
+    """
+    results = []
+    keyword_lower = keyword.lower()
+
+    for s in students:
+        if keyword_lower in s.name.lower() or keyword_lower in s.student_id.lower():
+            results.append(s)
+
+    if results:
+        print(f"🔍 Tìm thấy {len(results)} sinh viên với từ khóa '{keyword}':")
+        for s in results:
+            print(f"  {s}")
+    else:
+        print(f"❌ Không tìm thấy sinh viên nào với từ khóa '{keyword}'")
+
+    return results
