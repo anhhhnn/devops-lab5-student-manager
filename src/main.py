@@ -10,9 +10,9 @@ def main():
 
     # Tạo danh sách sinh viên mẫu
     students = [
-        Student("SV001", "Nguyen Van A", 20, "K20"),
-        Student("SV002", "Tran Thi B", 21, "K20"),
-        Student("SV003", "Le Van C", 19, "K21"),
+        Student("SV001", "Vi Duc Doan", 20, "K22"),
+        Student("SV002", "Tran Viet Anh", 20, "K22"),
+        Student("SV003", "Luong Thi Men", 20, "K22"),
     ]
 
     # Hiển thị danh sách
